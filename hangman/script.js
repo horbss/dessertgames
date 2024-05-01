@@ -22,7 +22,9 @@ let chosenWord = words[Math.floor(Math.random() * words.length)];
 let guessedLetters = [];
 let remainingAttempts = 6;
 
+const imageElement = document.querySelector('.image');
 const wordElement = document.getElementById('word');
+const remainingElement = document.getElementById('remaining')
 const lettersElement = document.getElementById('letters');
 const messageElement = document.getElementById('message');
 const resetButton = document.getElementById('reset');
@@ -31,24 +33,25 @@ function displayWord() {
     wordArray = chosenWord.split('');
     hiddenWord = [];
     for(var i = 0; i < wordArray.length; i ++){
-        if(guessedLetters.includes(wordArray[i])){
+        if(wordArray[i] == ' ' || guessedLetters.includes(wordArray[i])){
             hiddenWord.push(wordArray[i]);
-        }else if(wordArray[i] === ' '){
-            hiddenWord.push('   ');
         }else{
             hiddenWord.push('_');
         }
     }
     var hiddenWordString = hiddenWord.join(' ');
     wordElement.textContent = hiddenWordString;
+    remainingElement.textContent = 'Remaining Attempts: ' + remainingAttempts;
 }
 
 function displayLetters() {
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-    const letters = alphabet.split('').map(letter => `
-        <button class="letter" ${guessedLetters.includes(letter) ? 'disabled' : ''} onclick="guess('${letter}')">${letter}</button>
-    `).join('');
-    lettersElement.innerHTML = letters;
+    const letters = alphabet.split('');
+    const buttons = letters.map(letter => {
+        const disabled = guessedLetters.includes(letter) ? 'disabled' : '';
+        return `<button class="letter" ${disabled} onclick="guess('${letter}')">${letter}</button>`;
+    })
+    lettersElement.innerHTML = buttons.join('');
 }
 
 function guess(letter) {
@@ -58,15 +61,16 @@ function guess(letter) {
     }
     displayWord();
     displayLetters();
+    displayImages();
     checkGameState();
 }
 
 function checkGameState() {
     if (remainingAttempts === 0) {
-        messageElement.textContent = 'Game over! You ran out of attempts. The word was: ' + chosenWord;
+        remainingElement.textContent = 'Game over! You ran out of attempts. The word was: ' + chosenWord;
         disableLetters();
     } else if (!wordElement.textContent.includes('_')) {
-        messageElement.textContent = 'Congratulations! You guessed the word!';
+        remainingElement.textContent = 'Congratulations! You guessed the word!';
         disableLetters();
     }
 }
@@ -76,6 +80,7 @@ function resetGame() {
     guessedLetters = [];
     remainingAttempts = 6;
     messageElement.textContent = '';
+    remainingElement.textContent = 'Remaining Attempts: ' + remainingAttempts;
     displayWord();
     displayLetters();
     enableLetters();
@@ -91,6 +96,33 @@ function enableLetters() {
     letterButtons.forEach(button => button.disabled = false);
 }
 
+function displayImages(){
+    console.log("Displaying image for remainingAttempts:", remainingAttempts);
+    switch(remainingAttempts){
+        case 6:
+            imageElement.src = "./images/1.png";
+            break;
+        case 5:
+            imageElement.src = "./images/2.png";
+            break;
+        case 4:
+            imageElement.src = "./images/3.png";
+            break;
+        case 3:
+            imageElement.src = "./images/4.png";
+            break;         
+        case 2:
+            imageElement.src = "./images/5.png";
+            break;
+        case 1:
+            imageElement.src = "./images/6.png";
+            break; 
+        default:
+            imageElement.src = "./images/2.png";
+    }
+}
+
 displayWord();
 displayLetters();
+displayImages();
 resetButton.addEventListener('click', resetGame);

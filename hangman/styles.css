@@ -5,6 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-color: #FFC8DD;
 }
 
 #hangman {
@@ -13,7 +14,11 @@ body {
 
 #word {
     margin-bottom: 20px;
+    margin-top: 20px;
     font-size: 24px;
+    font-family: 'Courier New', Courier, monospace; 
+    white-space: pre-wrap; 
+    color:#FF5C9A;
 }
 
 #letters {
@@ -23,10 +28,25 @@ body {
 #message {
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#remaining {
+    margin: 20px;
 }
 
 button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 12px;
+    background-color: antiquewhite;
+    border-color: #FF5C9A;
+    color: #FF5C9A;
+    margin: 1px;
+}
+
+button[disabled] {
+    opacity: 0.5; 
+    cursor: not-allowed; 
 }
