@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Caterpillar</title>
+        <link rel="stylesheet" type="text/css" href="styles/caterpillar.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Caterpillar Game</h1>
+        </header>
+        <main>
+            <div id="game-container"></div>
+            <div id="score-container">
+                <div class="scoreboard">Food: <span id="points">0</span></div>
+                <div class="scoreboard">Blocks: <span id="total-blocks">0</span></div>
+            </div>
+            <div id="controllers">
+                <!--
+                    Credit for icons:
+                    <a href="https://www.flaticon.com/free-icons/right-arrow" title="right arrow icons">Right arrow icons created by Flowicon - Flaticon</a>
+                -->
+                <button id="left-button">
+                    <img src="images/left-arrow.png" alt="A cartoon image of an arrow pointing right." title="Icon" />
+                </button>
+                <div>
+                    <button id="up-button">
+                        <img src="images/up-arrow.png" alt="A cartoon image of an arrow pointing right." title="Icon" />
+                    </button>
+                    <button id="down-button">
+                        <img src="images/down-arrow.png" alt="A cartoon image of an arrow pointing right." title="Icon" />
+                    </button>
+                </div>
+                <button id="right-button">
+                    <img src="images/right-arrow.png" alt="A cartoon image of an arrow pointing right." title="Icon" />
+                </button>
+            </div>
+        </main>
+        <footer>
+            <div>
+            Developed by
+            <a href="https://rabiroshan.com/" target="_blank">Rabi Roshan.</a>
+            </div>
+            <div>
+            View source code on
+            <a href="https://github.com/RabiRoshan/snake_game" target="_blank"
+                >GitHub.</a>
+            </div>
+        </footer>
+        <script src="scripts/caterpillar.js"></script>
+    </body>
+</html>

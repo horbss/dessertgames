@@ -1,0 +1,135 @@
+body {
+    background-color: #CDB4DB;
+    text-align: center;
+}
+  
+#game-container {
+    background-color: #b493c7;
+    border: solid 8px #ddd9d9;
+    border-radius: 10px;
+    margin: 1rem auto;
+    height: 40vw;
+    width: 40vw;
+}
+  
+.game-pixel {
+    border-radius: 10px;
+    float: left;
+    height: 1vw;
+    width: 5vw;
+}
+
+.snake-body {
+    background-color: #FFAFCC;
+    box-shadow: 0 0 5px #FFC8DD;
+}
+
+.food {
+    background-color: #8f5faa;
+}
+
+h1, h2 {
+    color: #b493c7;
+    font-family: "Pacifico", cursive;
+    text-align: center;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin: 0 0 0.5rem 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+.message {
+    color: #b493c7;
+    font-family: "Pacifico", cursive;
+    font-size: 1.25rem;
+    margin: 1.5rem 0 1rem 0;
+    max-width: 500px;
+    text-align: center;
+}
+
+#score-container {
+    width: 40vw;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
+  
+.scoreboard {
+    background-color: #b493c7;
+    border-radius: 10px;
+    border: solid 5px #ddd9d9;
+    color: #fff;
+    display: inline-block;
+    padding: 1vw;
+    width: 40%;
+}
+  
+#controllers {
+    display: none;
+}
+  
+footer {
+    margin-top: 2vw;
+    display: flex;
+    flex-direction: column;
+    color: #0c1021;
+    font-family: monospace;
+}
+
+footer a {
+    color: #0c1021;
+}
+  
+@media only screen and (max-width: 768px) {
+    #game-container {
+        width: 80vw;
+        height: 80vw;
+    }
+  
+    .game-pixel {
+        width: 2vw;
+        height: 2vw;
+    }
+  
+    #score-container {
+        width: 80vw;
+    }
+  
+    #controllers {
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        width: 80vw;
+        margin: 5vw auto;
+    }
+  
+    #controllers > div {
+        display: flex;
+        flex-direction: column;
+    }
+  
+    #controllers button {
+        background-color: transparent;
+        border: none;
+        margin: 2rem auto;
+    }
+
+    #controllers button img {
+        width: 80px;
+        height: 80px;
+    }
+    
+    #controllers button:focus {
+        outline: none;
+    }
+  
+    #controllers button:active {
+        background-color: slategray;
+    }
+}
