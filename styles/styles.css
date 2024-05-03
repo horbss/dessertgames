@@ -1,3 +1,12 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+    padding: 20px;
+}
+
 body {
     background-color: #FCECC9;
     display: grid;
@@ -5,11 +14,6 @@ body {
     height: 100vh;
     margin: 0;
     place-content: center;
-}
-
-header {
-    position:relative;
-    margin-top: 50px;
 }
 
 .container {
@@ -204,6 +208,32 @@ footer img{
     bottom: 0;
     left: 0;
 }
+
 a {
-    text-decoration: none; /* Removes underline */
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        margin-top: 25rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .choice, .choice2, .choice3 {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        margin: 1rem 0;
+    }
+
+    .choice p, .choice2 p, .choice3 p {
+        font-size: 0.5rem;
+        margin-top: 0.15rem;
+    }
 }
