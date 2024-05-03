@@ -2,6 +2,10 @@ body {
     background-color: #CDB4DB;
     text-align: center;
 }
+
+header{
+    margin-top: 100px;
+}
   
 #game-container {
     background-color: #b493c7;
@@ -85,6 +89,22 @@ footer {
 footer a {
     color: #0c1021;
 }
+
+.main-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 999; /* Ensure it appears on top of other elements */
+  }
+  
+  .main-button img {
+    max-width: 75px;
+    align-items: center;
+  }
+  .main-button:hover{
+    filter:brightness(70%);
+}
+
   
 @media only screen and (max-width: 768px) {
     #game-container {
@@ -133,3 +153,4 @@ footer a {
         background-color: slategray;
     }
 }
+

@@ -7,7 +7,17 @@ body {
     margin: 0;
     background-color: #FFC8DD;
 }
-
+.main-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 999; /* Ensure it appears on top of other elements */
+  }
+  
+  .main-button img {
+    max-width: 75px;
+    align-items: center;
+  }
 #hangman {
     text-align: center;
 }
@@ -76,14 +86,7 @@ h3 {
     font-size: 45px;
 }
 
-.main-button img{
-    max-width: 75px;
-    align-items: center;
-}
 
-.main-button p{
-    text-align: center;
-}
 
 .main-button:hover{
     filter:brightness(70%);

@@ -163,3 +163,18 @@ footer p {
 footer:hover {
     filter:brightness(70%);
 }
+
+.main-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 999; /* Ensure it appears on top of other elements */
+  }
+  
+  .main-button img {
+    max-width: 75px;
+    align-items: center;
+  }
+  .main-button:hover{
+    filter:brightness(70%);
+}

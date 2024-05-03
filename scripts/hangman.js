@@ -20,7 +20,7 @@ const words = [
 
 let chosenWord = words[Math.floor(Math.random() * words.length)];
 let guessedLetters = [];
-let remainingAttempts = 6;
+let remainingAttempts = 5;
 
 const imageElement = document.querySelector('.image');
 const wordElement = document.getElementById('word');
@@ -78,7 +78,7 @@ function checkGameState() {
 function resetGame() {
     chosenWord = words[Math.floor(Math.random() * words.length)];
     guessedLetters = [];
-    remainingAttempts = 6;
+    remainingAttempts = 5;
     messageElement.textContent = '';
     remainingElement.textContent = 'Remaining Attempts: ' + remainingAttempts;
     displayWord();
@@ -99,26 +99,24 @@ function enableLetters() {
 function displayImages(){
     console.log("Displaying image for remainingAttempts:", remainingAttempts);
     switch(remainingAttempts){
-        case 6:
-            imageElement.src = "./images/1.png";
-            break;
         case 5:
-            imageElement.src = "./images/2.png";
-            break;
-        case 4:
-            imageElement.src = "./images/3.png";
-            break;
-        case 3:
-            imageElement.src = "./images/4.png";
-            break;         
-        case 2:
             imageElement.src = "./images/5.png";
             break;
+        
+        case 4:
+            imageElement.src = "./images/4.png";
+            break;
+        case 3:
+            imageElement.src = "./images/3.png";
+            break;         
+        case 2:
+            imageElement.src = "./images/2.png";
+            break;
         case 1:
-            imageElement.src = "./images/6.png";
+            imageElement.src = "./images/1.png";
             break; 
         default:
-            imageElement.src = "./images/2.png";
+            imageElement.src = "./images/5.png";
     }
 }
 
