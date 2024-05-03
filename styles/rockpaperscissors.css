@@ -1,3 +1,10 @@
+header {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    margin-top: 5rem;
+}
+
 body {
     background-color: #BDE0FE;
     display: grid;
@@ -145,7 +152,7 @@ footer {
 }
 
 footer img {
-    max-width: 75px;
+    max-width: 100px;
 }
 
 footer p {
