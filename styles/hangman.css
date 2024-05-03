@@ -52,6 +52,10 @@ button[disabled] {
     cursor: not-allowed; 
 }
 
+button:hover {
+    filter: brightness(80%);
+}
+
 .pacifico-regular {
     font-family: "Pacifico", cursive;
     font-weight: 400;
@@ -63,10 +67,24 @@ button[disabled] {
     font-weight: 500;
     font-style: normal;
 }
+
 h3 { 
     font-family: "Pacifico", cursive;
     color: #FF5C9A;
     font-weight: 400;
     font-style: normal;
     font-size: 45px;
+}
+
+.main-button img{
+    max-width: 75px;
+    align-items: center;
+}
+
+.main-button p{
+    text-align: center;
+}
+
+.main-button:hover{
+    filter:brightness(70%);
 }

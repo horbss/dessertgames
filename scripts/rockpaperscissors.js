@@ -24,8 +24,8 @@ const playRound = (e) => {
     const computerSelection = computerTurn();
     const userSelection = e.currentTarget.selection;
     
-    userChoice.setAttribute('src', `images/${userSelection}.png`);
-    computerChoice.setAttribute('src', `images/${computerSelection}.png`);
+    userChoice.setAttribute('src', `./images/${userSelection}.png`);
+    computerChoice.setAttribute('src', `./images/${computerSelection}.png`);
 
     switch(userSelection) {
         case 'brownie':

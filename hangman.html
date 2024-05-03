@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hangman Game</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/hangman.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -15,13 +15,21 @@
 <body>
     <div id="hangman">
         <div><h3>hangcream</h3></div>
-        <div><img class="image" src="./images/2.png" height="25%" width="25%" alt="the hung man"></div>
+        <div><img class="image" src="./images/1.png" height="25%" width="25%" alt="the hung man"></div>
         <div id="word"></div>
         <div id="remaining"></div>
         <div id="letters"></div>
         <div id="message"></div>
         <button id="reset">Reset</button>
     </div>
-    <script src="script.js"></script>
+    <footer>
+        <div class = "main-button">
+            <a href="main.html">
+                    <img src="./images/candy-shop.png" alt="Candy Shop">
+            </a>
+            <p> Take me home! </p>
+        </div>
+    </footer>
+    <script src="./scripts/hangman.js"></script>
 </body>
 </html>
